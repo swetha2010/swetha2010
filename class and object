@@ -1,0 +1,13 @@
+class Student:
+    def _init_(self,name,registernumber,dep,age,year):
+        self.name=name
+        self.registernumber=registernumber
+        self.dep=dep
+        self.age=age
+        self.year=year
+    def address(self):
+        addr=f" my name is  : { self.name}\n my registernumber is : {self.registernumber}\n my departement is:{self.dep}"
+        return addr
+
+p1=Student('swetha',36,'EEE',20,3)
+print(p1.address())
