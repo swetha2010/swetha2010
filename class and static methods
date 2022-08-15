@@ -1,0 +1,30 @@
+from datetime import date
+class Student:
+    fees=15000
+    def __init__(self,name,rollno,gender,dob,city):
+        self.name=name
+        self.rollno=rollno
+        self.gender=gender
+        self.dob=dob
+        self.city=city
+    def age(self):
+        current_year=date.today().year
+        age=current_year - self.dob
+        return age
+    @classmethod
+    def change_fees(cls,amount):
+        cls.fees=amount
+        return cls.fees
+
+    @staticmethod
+    def department(dept):
+        available_dept=['EEE','ECE','CSE']
+        if dept in available_dept:
+            return True
+        return False
+
+stu1=Student('swetha',36,'female',2003,'chennai')
+stu2=Student('nithvik',20,'male',2013,'vellore')
+print(Student.change_fees(20000))
+print(stu2.department('CSE'))
+print(stu1.age())
