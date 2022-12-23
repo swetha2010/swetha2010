@@ -1,0 +1,10 @@
+'''Implement an autocomplete system. That is, given a query string [s] and a set of all possible query strings, return all strings in the set that have s as a prefix.
+For example, given the query string | de | and the set of strings [[dog], [deer], [deal]], return
+[[ deer deal]].'''
+
+s = input()
+a = [str(i) for i in input().split()]
+for i in a:
+    if s in i:
+        if i[0] == s[0]:
+            print(i)
